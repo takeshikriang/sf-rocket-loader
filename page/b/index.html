@@ -40,8 +40,11 @@
 
     <script type="application/javascript">
         function init() {
-            console.log('init');
+            document.removeEventListener('DOMContentLoaded', init);
+            window.removeEventListener('load', init);
+
             window.handleFaqPage();
+            console.log('init');
         }
 
         document.addEventListener('DOMContentLoaded', init);
