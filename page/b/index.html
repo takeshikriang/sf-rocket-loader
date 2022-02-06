@@ -38,17 +38,14 @@
 
     <script type="application/javascript" src="/script.js"></script>
 
-    <script data-cfasync="false" type="application/javascript">
-        /**
-         * https://developer.mozilla.org/en-US/docs/Web/API/Window/DOMContentLoaded_event
-         *
-         * How can I have Rocket Loader ignore specific JavaScripts?
-         * https://support.cloudflare.com/hc/en-us/articles/200169436-How-can-I-have-Rocket-Loader-ignore-specific-JavaScripts-
-         */
-        window.addEventListener('DOMContentLoaded', function () {
-            console.log('DOM loaded');
+    <script type="application/javascript">
+        function init() {
+            console.log('init');
             window.handleFaqPage();
-        });
+        }
+
+        document.addEventListener('DOMContentLoaded', init);
+        window.addEventListener('load', init);
     </script>
 </body>
 
