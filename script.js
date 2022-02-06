@@ -30,7 +30,7 @@ function init() {
       );
   });
 
-  console.log('accordion initialized successfully');
+  console.log('accordion: initialized');
 }
 
 function registerAccordion() {
@@ -40,7 +40,7 @@ function registerAccordion() {
 
 function handleFaqPage() {
   registerAccordion();
-  console.log('the function is injected into window object');
+  console.log('accordion: injected into window object');
 }
 
 window.handleFaqPage = handleFaqPage;
