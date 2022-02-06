@@ -39,20 +39,11 @@
     <script type="application/javascript" src="/script.js"></script>
 
     <script type="application/javascript">
-        function init() {
+        window.addEventListener('load', function () {
+            console.log('page is fully loaded');
             window.handleFaqPage();
-            console.log('handleFaqPage() successfully called');
-        }
-
-        if (document.readyState !== 'loading') {
-            console.log('document is already ready, just execute code here');
-            init();
-        } else {
-            document.addEventListener('DOMContentLoaded', function() {
-                console.log('document was not ready, place code here');
-                init();
-            });
-        }
+            console.log('handleFaqPage() is successfully called');
+        });
     </script>
 </body>
 
